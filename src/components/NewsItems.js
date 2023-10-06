@@ -3,7 +3,7 @@ const NewsItems = (props) => {
     let { title, description, imageUrl, newsUrl, author, date, source } = props;
     return (
         <div className="my-3">
-            <div className="card" style={{minHeight:"415px"}}>
+            <div className="card" style={{minHeight:"390px"}}>
                 <div style={{
                     display: 'flex',
                     justifyContent: 'flex-end',
@@ -21,8 +21,8 @@ const NewsItems = (props) => {
                 <div className="card-body">
                     <h5 className="card-title">{title}  </h5>
                     <p className="card-text textWrap">{description?description:"No description available... "}</p>
-                    <p className="card-text"><small className="text-muted">By {!author ? "Unknown" : author} on  {new Date(date).toGMTString()}</small></p>
-                    <a rel="noreferrer" href={newsUrl} target="_blank" className="btn btn-sm btn-dark position-absolute bottom-0 mb-3">Read More</a>
+                    <p className="card-text"><small className="text-muted position-absolute bottom-0 mb-5">By {!author ? "Unknown" : author} on  {new Date(date).toGMTString()}</small></p>
+                    <a rel="noreferrer" href={newsUrl} target="_blank" className="btn btn-sm btn-dark position-absolute bottom-0 mb-2">Read More</a>
                 </div>
             </div>
         </div>
